@@ -1,0 +1,47 @@
+@mixin spacing($up, $left, $right, $down) {
+	margin-top: $up;
+	margin-left: $left;
+	margin-right: $right;
+	margin-bottom: $down
+}
+
+%shrink {
+	width: 10em;
+	height: 10em;
+}
+
+body {
+	background-image: url('http://fc02.deviantart.net/fs70/f/2012/227/6/d/professor_oak__s_lab_by_rosegardeninhell-d5b7ktm.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.poke1 {
+	@include spacing(15em, 33em, 10em,  0em);
+		img {
+			@extend %shrink;
+	}
+}
+
+.poke2 {
+	@include spacing(-9.5em, 60em, -45em, 0em);
+		img {
+			@extend %shrink;
+			z-index: 9000;
+		}
+	}
+
+.poke3 {
+	@include spacing(-9.5em, 0em, 0em, 20em);
+		img {
+			z-index: -10000
+		}
+	}
+
+.poke4 {
+	@include spacing(0em, 5em, 0em, 0em);
+	img {
+			@extend %shrink;
+			@include spacing(0em, 0em, 0em, 0em);
+	}
+}

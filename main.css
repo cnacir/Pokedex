@@ -1,0 +1,43 @@
+.poke1 img, .poke2 img, .poke4 img {
+  width: 10em;
+  height: 10em; }
+
+body {
+  background-image: url("http://fc02.deviantart.net/fs70/f/2012/227/6/d/professor_oak__s_lab_by_rosegardeninhell-d5b7ktm.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.poke1 {
+  margin-top: 15em;
+  margin-left: 33em;
+  margin-right: 10em;
+  margin-bottom: 0em; }
+
+.poke2 {
+  margin-top: -9.5em;
+  margin-left: 60em;
+  margin-right: -45em;
+  margin-bottom: 0em; }
+  .poke2 img {
+    z-index: 9000; }
+
+.poke3 {
+  margin-top: -9.5em;
+  margin-left: 0em;
+  margin-right: 0em;
+  margin-bottom: 20em; }
+  .poke3 img {
+    z-index: -10000; }
+
+.poke4 {
+  margin-top: 0em;
+  margin-left: 5em;
+  margin-right: 0em;
+  margin-bottom: 0em; }
+  .poke4 img {
+    margin-top: 0em;
+    margin-left: 0em;
+    margin-right: 0em;
+    margin-bottom: 0em; }
+
+/*# sourceMappingURL=main.css.map */
