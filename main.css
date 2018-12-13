@@ -12,7 +12,21 @@
   overflow: hidden; }
 
 #aegislash {
-  background-image: url("http://getwallpapers.com/wallpaper/full/e/d/5/8710.jpg");
+  background-image: url("Images/Aegislash-Background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden; }
+
+#salamence {
+  background-image: url("Images/Salamence-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden; }
+
+#sceptile {
+  background-image: url("Images/Sceptile-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -44,8 +58,6 @@
   min-width: 25%; }
 
 #top-bar {
-  background-color: #011936;
-  opacity: 0.75;
   margin-top: -1em; }
 
 #logo {
@@ -64,30 +76,89 @@
   margin-bottom: 0;
   width: 75%;
   height: auto;
+  position: fixed;
   animation-name: fadeOut;
   animation-duration: 3s;
   animation-delay: 3s;
   opacity: 0;
   animation-fill-mode: forwards; }
 
-#poke-intro img {
-  position: fixed; }
-#poke-intro h2 {
-  position: relative;
-  margin-left: 15em;
-  color: #D4D2A5;
-  font-family: 'Cinzel', serif;
-  padding-top: 5em;
+#pokemon-pic2 {
+  margin-top: 0em;
+  margin-left: 50%;
+  margin-right: 100%;
+  margin-bottom: 10em;
+  width: 50%;
+  height: auto;
+  position: fixed;
+  animation-name: fadeOut;
+  animation-duration: 3s;
+  animation-delay: 3s;
   opacity: 0;
-  animation-name: fadeOutText;
-  animation-duration: 3s; }
+  animation-fill-mode: forwards; }
+
+#pokemon-pic3 {
+  margin-top: 5em;
+  margin-left: 20%;
+  margin-right: 100%;
+  margin-bottom: 10em;
+  width: 50%;
+  height: auto;
+  position: fixed;
+  animation-name: fadeOut;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  opacity: 0;
+  animation-fill-mode: forwards; }
+
+#poke-intro {
+  position: fixed; }
+  #poke-intro h2 {
+    position: relative;
+    font-size: 3.0vw;
+    margin-left: 15em;
+    color: #D4D2A5;
+    text-shadow: 1px 1px 0 red, -1px 2px 2px red, 1px -2px 2px red, -1px -2px 2px red, 2px 1px 2px red, -2px 1px 2px red, 2px -1px 2px red, -2px -1px 2px red;
+    opacity: 0;
+    animation-name: fadeOutText;
+    animation-duration: 3s;
+    font-size: 10px; }
+    @media (min-width: 320px) {
+      #poke-intro h2 {
+        font-size: calc(10px + strip-unit(10px) * (100vw - 320px) / strip-unit(1046px)); } }
+    @media (min-width: 1366px) {
+      #poke-intro h2 {
+        font-size: 20px; } }
+
+#poke-stats {
+  position: relative;
+  min-width: 25%;
+  height: auto; }
+  #poke-stats .name {
+    color: black; }
+  #poke-stats h3 {
+    padding-top: 1em;
+    animation-name: fadeOut;
+    animation-duration: 3s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    color: #D4D2A5;
+    text-shadow: 1px 1px 0 red, -1px 2px 2px red, 1px -2px 2px red, -1px -2px 2px red, 2px 1px 2px red, -2px 1px 2px red, 2px -1px 2px red, -2px -1px 2px red;
+    font-size: 15px; }
+    @media (min-width: 320px) {
+      #poke-stats h3 {
+        font-size: calc(15px + strip-unit(15px) * (100vw - 320px) / strip-unit(1046px)); } }
+    @media (min-width: 1366px) {
+      #poke-stats h3 {
+        font-size: 30px; } }
 
 @keyframes fadeOutText {
   from {
     font-size: 0em;
     opacity: 0; }
   to {
-    font-size: 6em;
+    font-size: 4em;
     opacity: 1; } }
 @keyframes fadeOut {
   from {

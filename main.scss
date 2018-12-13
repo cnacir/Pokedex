@@ -5,6 +5,37 @@
 	margin-bottom: $down
 }
 
+@mixin shadow($color) {
+	text-shadow:
+		1px 1px 0 $color,
+    -1px 2px 2px $color,
+    1px -2px 2px $color,
+    -1px -2px 2px $color,
+    2px 1px 2px $color,
+    -2px 1px 2px $color,
+    2px -1px 2px $color,
+    -2px -1px 2px $color;
+}
+//For font mobile responsiveness - from Smashing Magazine
+
+@mixin responsive($properties, $min-vw, $max-vw, $min-value, $max-value) {
+  @each $property in $properties {
+    #{$property}: $min-value;
+  }
+
+  @media (min-width: $min-vw) {
+    @each $property in $properties {
+      #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+    }
+  }
+
+  @media (min-width: $max-vw) {
+    @each $property in $properties {
+      #{$property}: $max-value;
+    }
+  }
+}
+
 %shrink {
 	max-width: 50%;
 	height: auto;
@@ -21,12 +52,27 @@
 }
 
 #aegislash {
-	background-image: url('http://getwallpapers.com/wallpaper/full/e/d/5/8710.jpg');
+	background-image: url('Images/Aegislash-Background.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 	overflow: hidden;
+}
 
+#salamence {
+	background-image: url('Images/Salamence-background.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+
+#sceptile {
+	background-image: url('Images/Sceptile-background.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	overflow: hidden;
 }
 
 #poke1 {
@@ -72,8 +118,6 @@
 }
 
 #top-bar {
-	background-color: #011936;
-	opacity: 0.75;
 	margin-top: -1em;
 
 
@@ -92,6 +136,7 @@
 	@include spacing(0em, 10em, 100%, 0);
 	width: 75%;
 	height: auto;
+	position: fixed;
 	animation-name: fadeOut;
 	animation-duration: 3s;
 	animation-delay: 3s;
@@ -99,23 +144,64 @@
 	animation-fill-mode: forwards;
 }
 
-#poke-intro {
-	img {
+#pokemon-pic2 {
+	@include spacing(0em, 50%, 100%, 10em);
+	width: 50%;
+	height: auto;
 	position: fixed;
-	}
+	animation-name: fadeOut;
+	animation-duration: 3s;
+	animation-delay: 3s;
+	opacity: 0;
+	animation-fill-mode: forwards;
+}
 
+#pokemon-pic3 {
+	@include spacing(5em, 20%, 100%, 10em);
+	width: 50%;
+	height: auto;
+	position: fixed;
+	animation-name: fadeOut;
+	animation-duration: 3s;
+	animation-delay: 3s;
+	opacity: 0;
+	animation-fill-mode: forwards;
+}
+
+
+#poke-intro {
+	position: fixed;
 	h2 {
 	position: relative;
+	font-size: 3.0vw;
 	margin-left: 15em;
 	color: #D4D2A5;
-	font-family: 'Cinzel', serif;
-	padding-top: 5em;
+	@include shadow(red);
 	opacity: 0;
 	animation-name: fadeOutText;
 	animation-duration: 3s;
-
+	@include responsive(font-size, 320px, 1366px, 10px, 20px);
 	}
+}
 
+#poke-stats {
+	position: relative;
+	min-width: 25%;
+	height: auto;
+	.name {
+		color: black;
+	}
+	h3 {
+		padding-top: 1em;
+		animation-name: fadeOut;
+		animation-duration: 3s;
+		animation-delay: 4s;
+		animation-fill-mode: forwards;
+		opacity: 0;
+		color: #D4D2A5;
+		@include shadow(red);
+		@include responsive(font-size, 320px, 1366px, 15px, 30px);
+	}
 }
 
 @keyframes fadeOutText {
@@ -126,7 +212,7 @@
     }
 
     to {
-			font-size: 6em;
+			font-size: 4em;
 			opacity: 1;
     }
 }
