@@ -6,42 +6,83 @@
 }
 
 %shrink {
-	width: 10em;
-	height: 10em;
+	max-width: 50%;
+	height: auto;
+	width: 100%;
+	display: inline-block;
 }
 
-body {
+#index-page {
 	background-image: url('http://fc02.deviantart.net/fs70/f/2012/227/6/d/professor_oak__s_lab_by_rosegardeninhell-d5b7ktm.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
+	overflow: hidden;
 }
 
-.poke1 {
-	@include spacing(15em, 33em, 10em,  0em);
+#aegislash {
+	background-image: url('http://getwallpapers.com/wallpaper/full/e/d/5/8710.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	overflow: hidden;
+
+}
+
+#poke1 {
+	position: relative;
 		img {
 			@extend %shrink;
+			min-width: 25%;
 	}
 }
 
-.poke2 {
-	@include spacing(-9.5em, 60em, -45em, 0em);
+#poke2 {
+	position: relative;
+ img {
+		 @extend %shrink;
+		 min-width: 25%;
+ }
+}
+
+
+#poke3 {
+	position: relative;
 		img {
 			@extend %shrink;
-			z-index: 9000;
+			min-width: 25%;
 		}
 	}
 
-.poke3 {
-	@include spacing(-9.5em, 0em, 0em, 20em);
-		img {
-			z-index: -10000
-		}
-	}
 
-.poke4 {
-	@include spacing(0em, 5em, 0em, 0em);
-	img {
-			@extend %shrink;
-			@include spacing(0em, 0em, 0em, 0em);
+#prof {
+	.prof-img:empty {
+		position: fixed;
+		min-width: 25%;
 	}
+}
+
+#top-bar {
+	background-color: #011936;
+	opacity: 0.85;
+	margin-top: -1.5em;
+
+
+	}
+	#logo {
+		margin-left: 35%;
+		margin-right: 50%;
+		img:empty {
+			min-width: 20%;
+			height: auto;
+			width: 25%;
+
+	}
+}
+@media screen and (orientation: portrait) {
+  img.ri { max-width: 90%; }
+}
+
+@media screen and (orientation: landscape) {
+  img.ri { max-height: 90%; }
 }
