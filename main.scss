@@ -31,6 +31,9 @@
 
 #poke1 {
 	position: relative;
+	a:hover {
+		opacity: 0.5
+	}
 		img {
 			@extend %shrink;
 			min-width: 25%;
@@ -39,6 +42,9 @@
 
 #poke2 {
 	position: relative;
+	a:hover {
+		opacity: 0.5
+	}
  img {
 		 @extend %shrink;
 		 min-width: 25%;
@@ -48,6 +54,9 @@
 
 #poke3 {
 	position: relative;
+		a:hover {
+			opacity: 0.5
+		}
 		img {
 			@extend %shrink;
 			min-width: 25%;
@@ -56,7 +65,7 @@
 
 
 #prof {
-	.prof-img:empty {
+	.prof-img {
 		position: fixed;
 		min-width: 25%;
 	}
@@ -64,25 +73,71 @@
 
 #top-bar {
 	background-color: #011936;
-	opacity: 0.85;
-	margin-top: -1.5em;
+	opacity: 0.75;
+	margin-top: -1em;
 
 
 	}
 	#logo {
-		margin-left: 35%;
+		margin-left: 37%;
 		margin-right: 50%;
+		margin-top: 2em;
 		img:empty {
 			min-width: 20%;
 			height: auto;
-			width: 25%;
-
+			width: 20%;
 	}
 }
-@media screen and (orientation: portrait) {
-  img.ri { max-width: 90%; }
+#pokemon-pic {
+	@include spacing(0em, 10em, 100%, 0);
+	width: 75%;
+	height: auto;
+	animation-name: fadeOut;
+	animation-duration: 3s;
+	animation-delay: 3s;
+	opacity: 0;
+	animation-fill-mode: forwards;
 }
 
-@media screen and (orientation: landscape) {
-  img.ri { max-height: 90%; }
+#poke-intro {
+	img {
+	position: fixed;
+	}
+
+	h2 {
+	position: relative;
+	margin-left: 15em;
+	color: #D4D2A5;
+	font-family: 'Cinzel', serif;
+	padding-top: 5em;
+	opacity: 0;
+	animation-name: fadeOutText;
+	animation-duration: 3s;
+
+	}
+
+}
+
+@keyframes fadeOutText {
+
+    from {
+    	font-size: 0em;
+      opacity: 0;
+    }
+
+    to {
+			font-size: 6em;
+			opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+
+    from {
+      opacity: 0;
+    }
+
+    to {
+			opacity: 1;
+    }
 }

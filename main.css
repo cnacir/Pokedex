@@ -20,41 +20,79 @@
 
 #poke1 {
   position: relative; }
+  #poke1 a:hover {
+    opacity: 0.5; }
   #poke1 img {
     min-width: 25%; }
 
 #poke2 {
   position: relative; }
+  #poke2 a:hover {
+    opacity: 0.5; }
   #poke2 img {
     min-width: 25%; }
 
 #poke3 {
   position: relative; }
+  #poke3 a:hover {
+    opacity: 0.5; }
   #poke3 img {
     min-width: 25%; }
 
-#prof .prof-img:empty {
+#prof .prof-img {
   position: fixed;
   min-width: 25%; }
 
 #top-bar {
   background-color: #011936;
-  opacity: 0.85;
-  margin-top: -1.5em; }
+  opacity: 0.75;
+  margin-top: -1em; }
 
 #logo {
-  margin-left: 35%;
-  margin-right: 50%; }
+  margin-left: 37%;
+  margin-right: 50%;
+  margin-top: 2em; }
   #logo img:empty {
     min-width: 20%;
     height: auto;
-    width: 25%; }
+    width: 20%; }
 
-@media screen and (orientation: portrait) {
-  img.ri {
-    max-width: 90%; } }
-@media screen and (orientation: landscape) {
-  img.ri {
-    max-height: 90%; } }
+#pokemon-pic {
+  margin-top: 0em;
+  margin-left: 10em;
+  margin-right: 100%;
+  margin-bottom: 0;
+  width: 75%;
+  height: auto;
+  animation-name: fadeOut;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  opacity: 0;
+  animation-fill-mode: forwards; }
+
+#poke-intro img {
+  position: fixed; }
+#poke-intro h2 {
+  position: relative;
+  margin-left: 15em;
+  color: #D4D2A5;
+  font-family: 'Cinzel', serif;
+  padding-top: 5em;
+  opacity: 0;
+  animation-name: fadeOutText;
+  animation-duration: 3s; }
+
+@keyframes fadeOutText {
+  from {
+    font-size: 0em;
+    opacity: 0; }
+  to {
+    font-size: 6em;
+    opacity: 1; } }
+@keyframes fadeOut {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 /*# sourceMappingURL=main.css.map */
