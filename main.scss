@@ -16,7 +16,7 @@
     2px -1px 2px $color,
     -2px -1px 2px $color;
 }
-//For font mobile responsiveness - from Smashing Magazine
+//For font mobile responsiveness - from Smashing Magazine's Fluid Typography article
 
 @mixin responsive($properties, $min-vw, $max-vw, $min-value, $max-value) {
   @each $property in $properties {
@@ -51,8 +51,18 @@
 	overflow: hidden;
 }
 
-#aegislash {
-	background-image: url('Images/Aegislash-Background.jpg');
+input {
+	border: 2px solid black;
+	@include spacing(10%, 7%, 0, 0);
+	width: 25%;
+}
+button {
+	border: 2px solid black;
+	font-weight: bold;
+}
+
+#dragonite {
+	background-image: url('Images/Dragonite-background.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -133,10 +143,11 @@
 	}
 }
 #pokemon-pic {
-	@include spacing(0em, 10em, 100%, 0);
-	width: 75%;
+	@include spacing(0em, 35%, 100%, 0);
+	width: 25%;
 	height: auto;
 	position: fixed;
+	@include shadow(black);
 	animation-name: fadeOut;
 	animation-duration: 3s;
 	animation-delay: 3s;
@@ -175,7 +186,7 @@
 	position: relative;
 	font-size: 3.0vw;
 	margin-left: 15em;
-	color: #D4D2A5;
+	color: white;
 	@include shadow(red);
 	opacity: 0;
 	animation-name: fadeOutText;
@@ -189,16 +200,20 @@
 	min-width: 25%;
 	height: auto;
 	.name {
-		color: black;
+		text-transform: capitalize;
+	}
+
+	.abilities{
+		text-transform: capitalize;
 	}
 	h3 {
-		padding-top: 1em;
+		padding-bottom: 1.5em;
 		animation-name: fadeOut;
 		animation-duration: 3s;
 		animation-delay: 4s;
 		animation-fill-mode: forwards;
 		opacity: 0;
-		color: #D4D2A5;
+		color: white;
 		@include shadow(red);
 		@include responsive(font-size, 320px, 1366px, 15px, 30px);
 	}

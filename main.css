@@ -11,8 +11,20 @@
   background-attachment: fixed;
   overflow: hidden; }
 
-#aegislash {
-  background-image: url("Images/Aegislash-Background.jpg");
+input {
+  border: 2px solid black;
+  margin-top: 10%;
+  margin-left: 7%;
+  margin-right: 0;
+  margin-bottom: 0;
+  width: 25%; }
+
+button {
+  border: 2px solid black;
+  font-weight: bold; }
+
+#dragonite {
+  background-image: url("Images/Dragonite-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -71,12 +83,13 @@
 
 #pokemon-pic {
   margin-top: 0em;
-  margin-left: 10em;
+  margin-left: 35%;
   margin-right: 100%;
   margin-bottom: 0;
-  width: 75%;
+  width: 25%;
   height: auto;
   position: fixed;
+  text-shadow: 1px 1px 0 black, -1px 2px 2px black, 1px -2px 2px black, -1px -2px 2px black, 2px 1px 2px black, -2px 1px 2px black, 2px -1px 2px black, -2px -1px 2px black;
   animation-name: fadeOut;
   animation-duration: 3s;
   animation-delay: 3s;
@@ -117,7 +130,7 @@
     position: relative;
     font-size: 3.0vw;
     margin-left: 15em;
-    color: #D4D2A5;
+    color: white;
     text-shadow: 1px 1px 0 red, -1px 2px 2px red, 1px -2px 2px red, -1px -2px 2px red, 2px 1px 2px red, -2px 1px 2px red, 2px -1px 2px red, -2px -1px 2px red;
     opacity: 0;
     animation-name: fadeOutText;
@@ -135,15 +148,17 @@
   min-width: 25%;
   height: auto; }
   #poke-stats .name {
-    color: black; }
+    text-transform: capitalize; }
+  #poke-stats .abilities {
+    text-transform: capitalize; }
   #poke-stats h3 {
-    padding-top: 1em;
+    padding-bottom: 1.5em;
     animation-name: fadeOut;
     animation-duration: 3s;
     animation-delay: 4s;
     animation-fill-mode: forwards;
     opacity: 0;
-    color: #D4D2A5;
+    color: white;
     text-shadow: 1px 1px 0 red, -1px 2px 2px red, 1px -2px 2px red, -1px -2px 2px red, 2px 1px 2px red, -2px 1px 2px red, 2px -1px 2px red, -2px -1px 2px red;
     font-size: 15px; }
     @media (min-width: 320px) {
