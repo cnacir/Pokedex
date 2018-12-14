@@ -1,5 +1,5 @@
 var apiUrl = "https://pokeapi.co/api/v2/pokemon/";
-var apiUrl2 = "http://fizal.me/pokeapi/api/v2/name/"
+var apiUrl2 = "https://fizal.me/pokeapi/api/v2/name/"
 var pokeName = document.querySelector("body").id;
 var nameStat = document.querySelector(".name");
 var hpStat = document.querySelector(".hp");
