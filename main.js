@@ -1,5 +1,5 @@
 var apiUrl = "https://pokeapi.co/api/v2/pokemon/";
-var apiUrl2 = "http://fizal.me/pokeapi/api/v2/name/"
+var apiUrl2 = "https://fizal.me/pokeapi/api/v2/name/"
 var pokeName = document.querySelector("body").id;
 var nameStat = document.querySelector(".name");
 var hpStat = document.querySelector(".hp");
@@ -9,15 +9,6 @@ var abilitiesStat = document.querySelector(".abilities");
 var input = document.querySelector("input");
 var button = document.querySelector("button");
 
-class Pokemon {
-	constructor(name, hp, attack, defense, abilities) {
-		this.name = name;
-		this.hp = hp;
-		this.attack = attack;
-		this.defense = defense;
-		this.abilities = abilities;
-	};
-};
 
 function pokemonData(pokeName) {
 	axios.get(apiUrl2 + pokeName + ".json")
