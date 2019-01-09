@@ -9,6 +9,9 @@ var abilitiesStat = document.querySelector(".abilities");
 var input = document.querySelector("input");
 var button = document.querySelector("button");
 
+// var frame = document.querySelectorAll(".frames");
+// var balls = document.querySelectorAll(".balls");
+
 
 function pokemonData(pokeName) {
 	axios.get(apiUrl2 + pokeName + ".json")
@@ -41,3 +44,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
 button.addEventListener("click", (event) => {
 	alert(`Hi, ${input.value}! Are you ready for your first pokemon team?\n Please click each pokeball to meet your new friends!`)
 });
+
+
+// 	balls[0].addEventListener("mouseover", (event) => {
+// 		frame[0].classList.add("show");
+// 	});
+//
+// 	balls[0l].addEventListener("mouseout", (event) => {
+// 		frame[0].classList.remove("show");
+// 	});
+// };
