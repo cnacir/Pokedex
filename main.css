@@ -49,21 +49,25 @@ button {
   #poke1 a:hover {
     opacity: 0.5; }
   #poke1 img {
-    min-width: 25%; }
+    min-width: 25%;
+    margin-right: 25px; }
 
 #poke2 {
   position: relative; }
   #poke2 a:hover {
     opacity: 0.5; }
   #poke2 img {
-    min-width: 25%; }
+    min-width: 25%;
+    margin-left: 200px;
+    margin-right: 50px; }
 
 #poke3 {
   position: relative; }
   #poke3 a:hover {
     opacity: 0.5; }
   #poke3 img {
-    min-width: 25%; }
+    min-width: 25%;
+    margin-left: 430px; }
 
 #prof .prof-img {
   position: fixed;
