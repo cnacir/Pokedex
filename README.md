@@ -1,11 +1,11 @@
 # Pokedex
 Building a small interactive pokedex to show 3 popular pokemon.
 
+https://cnacir.github.io/Pokedex/
+
 <h2>Technology Used</h2>
 pokeAPI, AJAX/Axios, DOM, HTML, SASS and JS
 <hr>
-
-<embed>https://cnacir.github.io/Pokedex/</embed>
 
 <h2>Description</h2>
 
